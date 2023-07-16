@@ -1,0 +1,28 @@
+/*
+8kyu Convert number to reversed array of digits
+
+
+Convert number to reversed array of digits
+
+Given a random non-negative number, you have to return the digits of this number within an array in reverse order.
+Example(Input => Output):
+
+35231 => [1,3,2,5,3]
+0 => [0]
+
+Arrays
+Fundamentals
+*/
+using System;
+using System.Collections.Generic;
+using System.Linq;
+namespace Solution
+{
+    class Digitizer
+    {
+        public static long[] Digitize(long n)
+        {
+            return n.ToString().Select(c => long.Parse(c.ToString())).Reverse().ToArray();
+        }
+    }
+}
